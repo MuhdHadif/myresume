@@ -123,6 +123,23 @@ html *{
     border-radius: 10px;
 }
 
+.pollSection{
+    width: fit-content;
+    margin:auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pollSection label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.radioButton{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .submitButton{
     font-size: 1.5rem;
     font-weight: bold;

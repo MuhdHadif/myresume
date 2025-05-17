@@ -44,7 +44,35 @@
         </div>
     </div>
 
+    <div id="pollSection" class="pollSection">
+        <div class="sectionTitle">Which device are you using?</div>
+        <div style="display: flex;">
+            <div class="radioButton">
+                <input type="radio" id="desktop" name="device" value="PC/Laptop">
+                <label for="desktop">PC/Laptop</label><br>
+            </div>
+            <div class="radioButton">
+                <input type="radio" id="mobile" name="device" value="Mobile">
+                <label for="mobile">Mobile</label><br>
+            </div>
+        </div>
+        <button class="submitButton" onclick="submit()">Submit</button>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/header.js"></script>
+    <script>
+        function submit(){
+            var radioDesktop = document.getElementById("desktop");
+            var radioMobile = document.getElementById("mobile");
+
+            if (!radioDesktop.checked && !radioMobile.checked){
+                alert("Please select one option.")
+            } else {
+                document.getElementById("pollSection").innerHTML = "<div class='sectionTitle'>Thank you for your response!</div>";
+                // alert("Thank you for your response!")
+            }
+        }
+    </script>
 </body>
 </html>
