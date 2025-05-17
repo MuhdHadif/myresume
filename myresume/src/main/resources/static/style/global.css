@@ -123,6 +123,16 @@ html *{
     border-radius: 10px;
 }
 
+.submitButton{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
 .grow{
     transition: all .2s ease-in-out;
 }

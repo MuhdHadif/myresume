@@ -38,11 +38,27 @@
     <div class="feedbackSection">
         <div class="sectionTitle">Leave your feedback</div>
         <div style="font-size: 1.5rem;">If you have any suggestions, let me know.</div>
-        <input placeholder="Feedback title">
-        <textarea placeholder="Feedback message" rows="5" ></textarea>
+        <input id="feedbackTitle" placeholder="Feedback title">
+        <textarea id="feedbackMsg" placeholder="Feedback message" rows="5" ></textarea>
+        <button class="submitButton" onclick="submit()">Submit feedback</button>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/header.js"></script>
+    <script>
+        function submit(){
+            var title = document.getElementById("feedbackTitle");
+            var msg = document.getElementById("feedbackMsg");
+            if (title.value.length == 0 || msg.value.length == 0){
+                alert("Please fill up both feedback title and message.")
+            } else {
+                confirm("Are you sure you want to submit?");
+                title.value = "";
+                msg.value = "";
+                alert("Thank you for your feedback!");
+                location.reload();
+            }
+        }
+    </script>
 </body>
 </html>
